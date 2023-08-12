@@ -32,7 +32,7 @@ class Program
     {
         foodX = rnd.Next(2, 116);
         if (foodX % 2 == 1) foodX += 1;
-        foodY = rnd.Next(1, 38);
+        foodY = rnd.Next(1, 35);
 
         // Проверка на появление еды в змейке
         for (int i = 1; i < snakeLenght; i++)
@@ -43,7 +43,7 @@ class Program
                 {
                     foodX = rnd.Next(2, 116);
                     if (foodX % 2 == 1) foodX += 1;
-                    foodY = rnd.Next(1, 38);
+                    foodY = rnd.Next(1, 35);
                     if (foodX != bodyX[i] && foodY != bodyY[i]) break;
                 }
             }
@@ -56,7 +56,7 @@ class Program
         {
             speedBuffX = rnd.Next(2, 116);
             if (speedBuffX % 2 == 1) speedBuffX += 1;
-            speedBuffY = rnd.Next(1, 38);
+            speedBuffY = rnd.Next(1, 35);
 
             // Проверка на появление баффа в змейке
             for (int i = 1; i < snakeLenght; i++)
@@ -67,7 +67,7 @@ class Program
                     {
                         foodX = rnd.Next(2, 116);
                         if (speedBuffX % 2 == 1) foodX += 1;
-                        foodY = rnd.Next(1, 38);
+                        foodY = rnd.Next(1, 36);
                         if (speedBuffX != bodyX[i] && speedBuffY != bodyY[i]) break;
                     }
                 }
@@ -82,6 +82,7 @@ class Program
         Console.SetBufferSize(120, 40);
         Console.CursorVisible = false;
         
+        /*
         // Игровое поле
         for (int x = 0; x < 120; x++)
         {
@@ -95,6 +96,7 @@ class Program
                 }
             }
         }
+        */
 
         // Стартовое значение змейки
         for (int i = 0; i < snakeLenght; i++)
